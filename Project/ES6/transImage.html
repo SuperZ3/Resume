@@ -206,23 +206,22 @@
                 })
             }
 
-            let queryData = function(){
-                return new Promise((resolve,reject)=>{
-                    let xhr = new XMLHttpRequest;
-                    xhr.open('GET','http://localhost:888/banner.json')
-                    xhr.onreadystatechange=function(){
-                        if(xhr.readyState == 4 && xhr.status === 200){
-                            let data = JSON.parse(xhr.responseText);
-                            resolve(data)
-                        }
-                    }
-                    xhr.send(null)
-                })
-            }
+            // let queryData = function(){
+            //     return new Promise((resolve,reject)=>{
+            //         let xhr = new XMLHttpRequest;
+            //         xhr.open('GET','http://localhost:888/banner.json')
+            //         xhr.onreadystatechange=function(){
+            //             if(xhr.readyState == 4 && xhr.status === 200){
+            //                 let data = JSON.parse(xhr.responseText);
+            //                 resolve(data)
+            //             }
+            //         }
+            //         xhr.send(null)
+            //     })
+            // }
             
-            let bindHTML = function (data){
-                console.log(data)
-                let {img} = data;
+            let bindHTML = function (){
+                let data = ["./1.jpg","./2.jpg","./3.jpg","./4.jpg"]
                 let strSlide = ``,
                     strFocus = ``;
                 data.forEach((item,index)=>{
@@ -276,14 +275,16 @@
             }
             return {
                 init:function(){
-                    let promise = queryData();
-                    promise.then(bindHTML).then(()=>{
-                        autoTimer = setInterval(autoMove, interval);
-                    }).then(()=>{
+                    // let promise = queryData();
+                    // promise.then(bindHTML).then(()=>{
+                    //     autoTimer = setInterval(autoMove, interval);
+                    // }).then(()=>{
+                        bindHTML()
+                        autoTimer = setInterval(autoMove, interval)
                         handleContainer();
                         handleFocus();
                         handleArrow();
-                    });
+                    // });
                 }
             }
         })()
