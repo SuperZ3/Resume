@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张宗智</title>
+    <link rel="stylesheet" href="./css/bootstrap.css"/>
+    <!-- <script src="./jquery.slim.js"></script> -->
+    <style>
+        /* body{
+            overflow: hidden;
+        } */
+        span{
+            font-size: 10px;
+        }
+        .callMe{
+            margin-left: 10px;
+        }
+        h3{
+            margin-left:2px;
+            line-height: 0.6;
+            margin-top:10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h4{
+            margin-left:5px;
+            margin-bottom: 0;
+            line-height: 0.9;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        h5{
+            color:rgb(13, 65, 13);
+            line-height: 0.1;
+            font-weight: bold;
+        }
+        .rootBox{
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .container{
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+        }
+        .showItem{
+            margin:5px ;
+            padding-top: 2px;
+            border-radius: 7px;
+            border-left: 0.5px solid grey;
+            box-shadow: 1px 1px 1px 0.1px rgb(83, 83, 83);
+        }
+        .leftBox{
+            padding:0;
+        }
+        .clearBottom{
+            margin-bottom: 0;
+        }
+        .rightBox{
+            padding:0;
+        }
+        li{
+            list-style:url(https://www.w3school.com.cn/i/eg_arrow.gif);
+        }
+        .glyphicon{
+            margin-right: 5px;
+        }
+        .glyphicon-wrench{
+            font-size: 16px;
+        }
+        .glyphicon-user{
+            font-size: 16px;
+        }
+        .glyphicon-apple{
+            font-size: 16px;
+        }
+        .glyphicon-paperclip{
+            margin-left: 10px;
+        }
+        .glyphicon-earphone{
+            font-size: 8px;
+        }
+        .mark{
+            width: 100%;
+            height:100%;
+            background-color: white;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color:black;    
+            font-size: 130px;
+            font-family: "微软雅黑";
+            animation: hide 2s ease-in;
+            animation-fill-mode:forwards
+        }
+        @media screen and (max-width: 768px) {
+            .mark {
+                display: none;
+            }
+        }
+        .headImg{
+            display: inline-block;
+            width:200px;
+            height: 200px;
+            border-radius: 50%;
+            background: url("./headImg1.jpg") no-repeat;
+            background-size: 100% 100%;
+        }
+        .hello{ 
+            font-size: 130px;
+            font-family: "微软雅黑";
+            animation: hide 2s ease-in 1;
+        } 
+        @keyframes hide {
+            0% {
+                opacity: 100%;
+                z-index: 999;
+            }
+            50% {
+                opacity: 100%;
+                z-index: 999;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+                position: absolute;
+                visibility: hidden;
+                z-index: -999;
+                left:-99999px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rootBox">
+        <div class="mark"><span class="headImg"></span><span class="hello">你好</span></div>
+        <div class="container row">
+            <div class="leftBox col-md-6 col-lg-6 col-sm-6">
+                <div class="myInfo">
+                    <h3><span class="glyphicon glyphicon-user"></span>个人信息<span class="callMe">张宗智 电话：18510247486</span></h3>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-book"></span>教育背景</h4>
+                        <ul><li>
+                            <h5>东北林业大学学士</h5>
+                            <span>专业:工业工程</span></br>
+                            <span>时间:2013.09 - 2017.06</span>
+                        </li></ul>
+                    </div>
+                    <div class="showItem clearBottom">
+                        <h4><span class="glyphicon glyphicon-briefcase"></span>工作经历</h4>
+                        <ul><li>
+                            <h5>北京京东方显示技术公司</h5>
+                            <span>职位:质量管理工程师</span></br>
+                            <span>时间:2017.07 - 2019.06</span>
+                        </li></ul>
+                        <ul><li>
+                            <h5>备注</h5>
+                            <span>简历在线地址：<a href=""></a></span></br>
+                            <span>您可在手机电脑线上访问本页项目</span>
+                        </li></ul>
+                    </div>
+                </div>
+                <div class="myTech">
+                    <h3><span class="glyphicon glyphicon-wrench"></span>基本技能</h3>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-eye-open"></span>前端</h4>
+                        <ul><li>
+                            <h5>ECMAScript</h5>
+                            <span>熟练运用JavaScript语言与HTML5、CSS3等技术，有运用canvas、CSS3动画制作<a href="">小Demo</a></span>
+                        </li></ul>
+                        <ul><li>
+                            <h5>框架</h5>
+                            <span>熟悉Vue、React、ReactNative使用，能实现Vue、React的简单源码</span>
+                        </li></ul>
+                    </div>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-cloud"></span>后端</h4>
+                        <ul><li>
+                                <h5>Node.js</h5>
+                                <span>使用Express搭建过后端程序与前端及数据库交互</span> 
+                        </li></ul>   
+                        <ul><li>
+                            <h5>HTTP</h5>
+                                <span>了解HTTP在客户端与服务端之间的通信过程</span>
+                                <span>了解控制cookie缓存、token相关使用方式及业务场景</span>
+                                <span>具备基本的Web安全知识（XSS/CSRF）</span>
+                        </li></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rightBox col-md-6 col-lg-6 col-sm-6">
+                <div class="projShow">
+                    <h3><span class="glyphicon glyphicon-apple"></span>几个项目</h3>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-send"></span>JS项目</h4>
+                        <ul><li>
+                            <h5>JS轮播图<a href="./Project/ES6/transImage.html"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>项目介绍：主要运用ES6 Class封装运动框架，实现轮播图</span></br>
+                            <h5><a href="./Project/ES6/canvas.html">canvas画板</a>，<a href="./Project/ES6/3DImg.html">CSS3 3D轮播</a><span class="glyphicon glyphicon-paperclip"></a></h5>
+                            <span>项目介绍：用canvas实现简易画板可回退，CSS3动画简单3D轮播</span>
+                        </li></ul>                    
+                    </div>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-send"></span>React项目</h4>
+                        <ul><li>
+                            <h5>Antd表单验证组件实现<a href="./Project/React/AntdPractice.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>项目介绍：在Antd验证组件基础之上，使用高阶组件方式实现验证逻辑</span></br>
+                            <h5>React简单源码<a href="./Project/React/Source.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>项目介绍：简单实现React虚拟dom渲染、redux状态管理、react-router的简单源码</span></br>
+                        </li></ul>  
+                    </div>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-send"></span>Vue项目</h4>
+                        <ul><li>
+                            <h5>Vue购物<a href="./Project/Vue/dist/index.html"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>结合Vant框架，模拟购物App轮播，添加购物车功能</span></br>
+                            <h5>Vue简单源码<a href="./Project/Vue/mvue.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>项目介绍：简单实现Vue响应式、Vuex状态管理、VueRouter组件的简单源码</span></br>
+                        </li></ul>
+                    </div>
+                    <div class="showItem">
+                        <h4><span class="glyphicon glyphicon-send"></span>NODE项目</h4>
+                        <ul><li>
+                            <h5>Node 登录<a href="./Project/Node/Login SSR/"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>流程：使用KOA、ejs渲染页面到客户端，结合session实现登录验证</span></br>
+                            <h5>KOA简单实现<a href="./Project//Node/koa.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                            <span>项目介绍：基础node实现KOA上下文及中间件</span></br>
+                        </li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
