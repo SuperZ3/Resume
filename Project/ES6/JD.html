@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi!</title>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: rgb(240, 240, 240);
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:red
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin:0;
+            color: black;
+            font-size: 20px;
+        }
+        .navigation{
+            width: 100%;
+            background-color: rgb(204, 204, 204);
+        }
+        .navigation #nav-content{
+            width: 990px;
+            background-color: rgb(204, 204, 204);
+            margin:0 auto;
+            height: 30px;
+            line-height: 30px;
+            color:rgb(107, 107, 107);
+            font-size: 14px;
+            
+        }
+        .navigation #nav-content::after{
+            content: "";
+            display: block;
+            height: 0;
+            clear:both;
+            visibility: hidden;
+        }
+        .navigation #nav-content #location-left{
+            float: left;
+            cursor: pointer;
+        }
+        .navigation #nav-content #location-left:hover{
+            background-color: white;
+        }
+        .navigation #nav-content #location-left #local-left{
+            width: 300px;
+            height: 100px;
+            border-width: 0px 1px 1px 1px;
+            border-color: rgb(204, 204, 204);
+            border-style: solid;
+            margin-left: -1px;
+            display: none;
+            position: absolute;
+        }
+        .navigation #nav-content #location-left:hover #local-left{
+            background-color: white;
+            display: block;
+            z-index: 999;
+        }
+        .navigation #nav-content #location-left:hover #local-left ul{
+            width: 90%;
+            height: 80%;
+            margin:10px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            align-items:flex-start;
+            flex-wrap: wrap;
+        }
+        .navigation #nav-content #location-left:hover #local-left ul li{
+            align-self: flex-start;
+            margin-right: 20px;
+        }
+        .navigation #nav-content #location-left:hover #local-left ul li:hover{
+            color: red;
+        }
+        .navigation #nav-content #location-left:hover #local-left ul li:nth-of-type(5){
+            background-color: red;
+            color: white;
+        }
+        .navigation #nav-content #location-right{
+            float: right;
+            cursor: pointer;
+        }
+        .navigation #nav-content #location-right ul li{
+            float: left;
+        }
+        .navigation #nav-content #location-right ul li:nth-of-type(1){  
+            width:108px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:nth-of-type(5):hover{  
+            background-color: white;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:hover{  
+            color:red;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:nth-of-type(5) #myJD{
+            position: absolute;
+            border-width: 0px 1px 1px 1px;
+            border-color: rgb(204, 204, 204);
+            border-style: solid;
+            color:rgb(107, 107, 107);
+            top:30px;
+            margin-left: -1px;
+            padding:10px;
+            width:300px;
+            height: 160px;
+            background-color: white;
+            z-index: 999;
+            display: none;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:nth-of-type(5) #myJD #myJD-order{
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:nth-of-type(5) #myJD #myJD-pay{
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .navigation #nav-content #location-right #navigation-ul li:nth-of-type(5):hover #myJD{
+            display: block;
+        }
+        .navigation #nav-content #location-right ul .splitli{
+            overflow: hidden;
+            margin: 11px 5px 0;
+            width: 1px;
+            height: 10px;
+            background-color: rgb(223, 223, 223);
+        }
+        .header{
+            width: 100%;
+            height: 140px;
+            border:1px solid white;
+            border-bottom: 1px solid rgb(223, 223, 223);
+            background-color: white;
+        }
+        .header #head-content{
+            width: 990px;
+            height: 120px;
+            margin:0 auto;
+            padding: 0px;
+            transform: translateY(10px);
+        }  
+        .header #head-content #logo{
+            width: 134px;
+            height: 120px;
+            float: left;
+            background: url("https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            margin-right: 100px;
+        }
+        .header #head-content #logo-right{
+            display: flex;
+            flex-direction: column;
+        }
+        .header #search{
+            width: 486px;
+            height: 32px;
+            float: left;
+            margin-top: 25px;
+        }
+        .header #search #search-content{
+            border: 2px solid red;
+            top:50%;
+            height: 100%;
+            margin-top: -16px;
+            display: flex;
+            align-items: center;
+        }
+        .header #search #search-content #search-imagine{
+            margin-top: 2px;
+            width:433px;
+            border:1px solid rgb(204, 204, 204);
+            position: absolute; 
+            display: none;    
+            top:45px;
+            z-index: 999;
+            background-color: white;
+        }
+        .header #search #search-content #search-imagine #search-imagine-btn{
+            position: absolute;
+            border:none;
+            left: 403px;
+            background-color: white;
+        }
+        .header #search #search-content #search-input{
+            flex: 9;
+            padding:0;
+            height: 100%;
+            border: none;
+            outline: none;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .header #search #search-content #header-btn{
+            flex: 1;
+            border: none;
+            height: 100%;
+            background-color: red;
+        }  
+        .header #head-content #hotwords{
+            width:433px;
+            font-size: 14px;
+            float: left;
+            margin-top:-7px;
+        }
+        .header #head-content #hotwords a{
+            color:rgb(107, 107, 107);
+            margin-right:2px;
+        }
+        .header #head-content #hotwords a:hover{
+            color:red
+        }
+        .header #navitems{
+            font-size: 18px;
+            position: absolute;
+            height: 40px;
+            width: 100%;
+            top:90px;
+            left:230px;
+        }
+        .header #head-content #navitems li{
+            float: left;
+            line-height: 40px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .header #head-content #navitems li:hover{
+            color:red;
+        }
+        .header #head-content #navitems li:nth-of-type(1){
+            font-weight: bold;
+            color:red;
+        }
+        .header #head-content #navitems li:nth-of-type(2){
+            font-weight: bold;
+            color:red;
+        }
+        .header #my-cart{
+            border: 1px solid rgb(223, 223, 223);
+            width: 130px;
+            height: 34px;
+            position: absolute;
+            left: 800px;
+            top: 9px;
+            font-size: 16px;
+            color: red;
+            line-height: 34px;
+        }
+        .header #my-cart:hover{
+            border: 1px solid red;
+        }
+        .bodies{
+            width: 990px;
+            margin:10px auto;
+        }
+        .bodies .show{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+        .bodies .show .show-left{
+            width:190px;
+            height: 470px;
+            padding: 0;
+            margin:0;
+            background-color: white;
+            z-index: 999;
+        }
+        .bodies .show .show-left:hover .show-left-detail{
+            display: block;
+        }
+        .bodies .show .show-left .show-left-detail{
+            width:600px;
+            height: 475px;
+            background-color: white;
+            box-shadow:0px 0px 5px 0.2px #888888;
+            position: absolute;
+            left:190px;
+            top:-0px; 
+            display: none;
+        }
+        .bodies .show .show-left .show-left-detail dl{
+            width:100%;
+            margin:10px;
+        }
+        .bodies .show .show-left .show-left-detail dl dt{
+            float: left;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .bodies .show .show-left .show-left-detail dl dd{
+            margin-left: 10px;
+        }
+        .bodies .show .show-left .show-left-detail dl dd a{
+            color: black;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .bodies .show .show-left .show-left-detail dl dd a:hover{
+            color: red;
+        }
+        .bodies .show .show-left .show-left-items{
+            padding:10px 0;
+        }
+        .bodies .show .show-left .show-left-items li{
+            height: 25px;
+            font-size: 16px;
+            line-height: 25px;
+            padding-left:18px;
+        }
+        .bodies .show .show-left .show-left-items li:hover{
+            background-color: rgb(204, 204, 204);
+        }
+        .bodies .show .show-left .show-left-items li a{
+            color:black;
+        }
+        .bodies .show .show-left .show-left-items li a:hover{
+            color:red;
+        }
+        .bodies .show .show-left .show-left-items li .items-splicer{
+            padding:0 2px;
+        }
+        .bodies .show .show-middle{
+            width:590px;
+            height: 470px;
+            /* border:1px solid black; */
+            
+            /* background-color: white; */
+            /* opacity:0; */
+        }
+        .bodies .show .show-right{
+            width:190px;
+            height: 470px;
+            padding: 0;
+            z-index: 999;
+        }
+        .bodies .show .show-right .show-right-top{
+            width:100%;
+            height: 102px;
+            background-color: white;
+            margin:0;
+            display: flex;
+            flex-direction: column;
+        }
+        .bodies .show .show-right .show-right-top::after{
+            height: 1px;
+            width: 190px;
+            background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);;
+            content: " ";
+            bottom: 0;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-head{
+            font-size: 12px;
+            flex:2;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-head div:nth-child(1){
+            width: 40px;
+            height: 40px;
+            border-radius: 50% 50%;
+            background: url("data:image/png;base64,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");
+            background-repeat: no-repeat;
+            background-size: 100%;
+            float: left;
+            margin-top: 13px;
+            margin-left: 20px;
+            margin-right: 13px;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-head div:nth-child(2){
+            margin-top: 13px;
+            cursor: pointer;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-head div:nth-child(2) p:nth-child(1) {
+            margin-bottom: 5px;  
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-head div:nth-child(2) p a{
+            color: black;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-bottom{
+            flex: 1;
+            text-align: center;
+        }
+        .bodies .show .show-right .show-right-top .show-right-top-bottom a{
+            width: 70px;
+            height: 25px;
+            margin:0 5px;
+            display: inline-block;
+            line-height: 25px;
+            text-align: center;
+            background-color: red;
+            color:white;
+            border-radius: 12.5px;
+            font-size: 12px;
+        }
+        .bodies .show .show-right .show-right-middle{
+            width:100%;
+            height: 130px;
+            margin:0;
+            background-color: white;
+        }
+        .bodies .show .show-right .show-right-middle::after{
+            height: 1px;
+            width: 190px;
+            display: block;
+            background: linear-gradient(270deg,white,#eeeeee,#eeeeee,white);;
+            content: "";
+            bottom: 0;
+        }
+        .bodies .show .show-right .show-right-middle .news-head{
+            padding-top: 8px;
+            margin-bottom: 8px;
+            margin-left: 15px;
+            display:flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .bodies .show .show-right .show-right-middle .news-head h5{
+            display: inline-block;
+        }
+        .bodies .show .show-right .show-right-middle .news-head a{
+            float: right;
+            font-size: 14px;
+            margin-right: 15px;
+            color: black;
+        }
+        .bodies .show .show-right .show-right-middle .news-head a:hover{
+            color:red
+        }
+        .bodies .show .show-right .show-right-middle .news-list{
+            font-size: 14px;
+            margin-left: 15px;
+        }
+        .bodies .show .show-right .show-right-middle .news-list li{
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            width: 160px;
+            cursor: pointer;
+            margin-bottom: 3px;
+        }
+        .bodies .show .show-right .show-right-middle .news-list li a{
+            color: black;
+        }
+        .bodies .show .show-right .show-right-middle .news-list li a span{
+            color: red;
+            margin-right: 10px;
+            display: inline-block;
+            padding: 0 5px;
+            background-color: rgb(253, 183, 183);
+        }
+        .bodies .show .show-right .show-right-middle .news-list li a:hover{
+            color: red;
+        }
+        .bodies .show .show-right .show-right-bottom{
+            width:100%;
+            height: 238px;
+            background-color: white;
+            margin:0
+        }
+        .bodies .show .show-right .show-right-bottom .up{
+            width: 180px;
+            height: 230px;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0px auto;
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list{
+            margin:0px auto;
+            background-color: rgba(255,255,255,0.5);
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list li{
+            float:left;
+            width: 40px;
+            height: 55px;
+            margin-left:10px;
+            margin-right:10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .upDateUp a{
+            position: relative;
+            top:-20px;
+        }
+        .upDateNone a img{
+            z-index: -999;
+        }
+        .upDate a span::after{
+            content: " ";
+            width: 24px;
+            height: 3px;
+            background-color: red;
+            margin-top: 5px;
+            color: red;
+            display: block;
+            position: relative;
+            left: 3px;
+        }
+        .upDateZero a span::after{
+            content: " ";
+            width: 24px;
+            height: 3px;
+            background-color:red;
+            opacity: 0;
+            margin-top: 5px;
+            display: block;
+            position: relative;
+            left: 3px;
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list li:hover a{
+            color:red
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list li a{
+            width: 60px;
+            height: 55px;
+            font-size: 14px;
+            color: black;
+            display: flex;
+            margin-left:-10px;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list li a span{
+            display: inline-block;
+            margin:0;
+            margin:0px auto;
+            top:-5px;
+        }
+        .bodies .show .show-right .show-right-bottom .up .up-list li a img{
+            width: 28px;
+            height: 28px;
+            margin:0px auto;
+        }
+        .bodies .show .show-right .show-right-bottom .down{
+            width: 100%;
+            height: 206px;
+            background-color: white;
+            position: relative;
+            display: none;
+        }
+        .bodies .show .show-right .show-right-bottom .down a{
+            width: 20px;
+            height: 20px;
+            border: none;
+            border-radius: 50% 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 18px;
+            background-color: white;
+            line-height: none;
+            color:rgb(107, 107, 107);
+            position: relative;
+            top: 176px;
+            left:50%;
+            margin-left: -10px;
+            float: left;
+        }
+        .bodies .show .show-right .show-right-bottom .down a:hover{
+            background-color: red;
+            color: white;
+        }
+        /* 轮播 */
+        #swiper{
+            position:relative;
+            width:590px;
+            height: 470px;
+            /* border: 1px solid black; */
+        }
+        #imgContainer{
+            position: absolute;
+            height: 470px;
+        }
+        .slide {
+            width:590px;
+            height: 470px;
+            /* border: 1px solid black; */
+            float: left;
+        }
+        /* .imgShow{
+            opacity: 0;
+        } */
+        /* #imgActive{
+            opacity: 1;
+        } */
+        .slide img{
+            height: 100%;
+        }
+        #clickLeft{
+            width: 25px;
+            height: 35px;
+            position: absolute;
+            text-decoration: none;
+            top:50%;
+            margin-top: -17.5px;
+            background-color: #999;
+            line-height: 35px;
+            text-align: center;
+            /* z-index: 999; */
+            opacity: 0.3;
+            border-radius: 0 20px 20px 0;
+        }
+        #clickLeft:hover{
+            opacity: 0.8;
+        }
+        #clickRight{
+            width: 25px;
+            height: 35px;
+            position: absolute;
+            /* display: none; */
+            text-decoration: none;
+            top:50%;
+            right: 0;
+            margin-top: -17.5px;
+            line-height: 35px;
+            text-align: center;
+            background-color: #999;
+            /* z-index: 999; */
+            opacity: 0.3;
+            border-radius: 20px 0 0 20px;
+        }
+        #clickRight:hover{
+            opacity:0.8
+        }
+        #redDot{
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            margin-top: -25px;
+            left: 50%;
+            margin-left: -60px;
+        }
+        #redDot li{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin:0 5px;
+            border-radius: 50% 50%;
+            background-color: rgb(128, 128, 128);
+        }
+        .liActive{
+            background-color: white;
+            box-shadow: 0 0 10px 5px #999;
+            z-index: 999;
+        }
+        .waterfall{
+            width: 1000px;
+            /* height: 1000px; */
+            /* border:1px solid blue; */
+            margin: 10px auto;
+        }
+        .waterfall-ul{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            /* margin: 0 -4px; */
+            /* background-color: coral; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .waterfall-ul li{
+            width: 190px;
+            height: 266px;
+            margin: 0 5px 8px;
+            background-color: white;
+            /* border: 1px solid black; */
+            float: left;
+        }
+        .waterfall-ul li:hover{
+            opacity: 0.6;
+        }
+        .waterfall-ul li img{
+            width: 120px;
+            height: 120px;
+            margin: 35px;
+            /* background:url("./images/loading.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat; */
+        }
+        .waterfall-ul li p{
+            width: 170px;
+            height: 40px;
+            margin: 5px auto;
+            /* background-color: pink; */
+            color: #666;
+            overflow: hidden;
+            /* white-space: nowrap; */
+            text-overflow: ellipsis;
+            font-size: 14px;
+            word-break: break-all;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .waterfall-ul li .price{
+            width: 170px;
+            height: 20px;
+            font-size: 16px;
+            color: #e1251b;
+            line-height: 20px;
+            font-style: blod;
+        }
+        .footer{
+            width: 100%;
+            background-color: rgb(204, 204, 204);
+        }
+        .footer-content{
+            width: 990px;
+            background-color: rgb(204, 204, 204);
+            margin:0 auto;
+            height: 200px;
+            line-height: 200px;
+            color:rgb(107, 107, 107);
+            font-size: 50px;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div id="nav-content">
+                <div id="location-left"><i class="iconfont icon-dingwei" style="color:#f10215"></i>黑龙江
+                    <div id="local-left">
+                        <ul>
+                            <li>北京</li>
+                            <li>上海</li>
+                            <li>深圳</li>
+                            <li>杭州</li>
+                            <li>黑龙江</li>
+                            <li>重庆</li>
+                            <li>天津</li>
+                            <li>浙江</li>
+                            <li>江苏</li>
+                            <li>新疆</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="location-right">
+                    <ul id="navigation-ul">
+                        <li>
+                            <a href="javascript:void()" style="color:rgb(107, 107, 107)">你好请登录</a>
+                            <a href="javascript:void()">免费注册</a>
+                        </li>
+                        <li class="splitli"></li>
+                        <li>我的订单</li>
+                        <li class="splitli"></li>
+                        <li>我的京东<i class="iconfont icon-arrow-down"></i>
+                            <div id="myJD">
+                                <ul id="myJD-order">
+                                    <li>待处理商品</li>
+                                    <li>消息</li>
+                                    <li>退换货</li>
+                                    <li>问答</li>
+                                    <li>商品</li>
+                                    <li>关注</li>
+                                </ul>
+                                <hr>
+                                <ul id="myJD-pay">
+                                    <li>京豆</li>
+                                    <li>优惠券</li>
+                                    <li>白条</li>
+                                    <li>理财</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="splitli"></li>
+                        <li>京东会员</li>
+                        <li class="splitli"></li>
+                        <li>企业采购</li>
+                        <li class="splitli"></li>
+                        <li>客户服务</li>
+                        <li class="splitli"></li>
+                        <li>网站导航</li>
+                        <li class="splitli"></li>
+                        <li>手机京东</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div id="head-content">
+                <div id="logo"></div>
+                <div id="search">
+                    <div id="search-content">
+                        <ul id="search-imagine"></ul>
+                        <input type="text" id="search-input" placeholder="拉萨解放达拉斯">
+                        <button id="header-btn"><i class="iconfont icon-icon-test" style="color:white;font-size: 20px;"></i></button>
+                    </div>
+                </div>
+                <div id="hotwords">
+                    <a href="javascript:void();">进口日盛典</a>
+                    <a href="javascript:void();">烧鸡IP日</a>
+                    <a href="javascript:void();">童装童鞋</a>
+                    <a href="javascript:void();">小家电</a>
+                    <a href="javascript:void();">美妆彩妆</a>
+                    <a href="javascript:void();">每100-50</a>
+                    <a href="javascript:void();">360 9x</a>
+                </div>
+                <div id="navitems">
+                    <ul id="navitems-item">
+                        <li>秒杀</li>
+                        <li>优惠券</li>
+                        <li>PLUS会员</li>
+                        <li>品牌闪购</li>
+                        <li>拍卖</li>
+                        <li>京东家电</li>
+                        <li>京东超市</li>
+                        <li>京东生鲜</li>
+                        <li>京东国际</li>
+                        <li>京东筋肉</li>
+                    </ul>
+                </div>
+                <div id="my-cart">
+                    <i class="iconfont icon-icon-test1" style="margin:0 10px 0 5px;font-weight: bold;"></i>
+                    我的购物车
+                </div>
+            </div>
+        </div>
+        <div class="bodies">
+            <div class="show">
+                <div class="show-left">
+                    <ul class="show-left-items">
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                        <li><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a><span class="items-splicer">/</span><a href="javascript:void();">手机</a></li>
+                    </ul>
+                    <div class="show-left-detail">
+                        <dl>
+                            <dt>
+                                手机>
+                            </dt>
+                            <dd>
+                                <a>iphone</a>
+                                <a>小米</a>
+                                <a>华为</a>
+                                <a>vivo</a>
+                                <a>oppo</a>
+                                <a>中兴</a>
+                                <a>三星</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                读书>
+                            </dt>
+                            <dd>
+                                <a>老人与海</a>
+                                <a>小米</a>
+                                <a>华为</a>
+                                <a>vivo</a>
+                                <a>oppo</a>
+                                <a>中兴</a>
+                                <a>三星</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                厨具>
+                            </dt>
+                            <dd>
+                                <a>抽烟机</a>
+                                <a>小米</a>
+                                <a>华为</a>
+                                <a>vivo</a>
+                                <a>oppo</a>
+                                <a>中兴</a>
+                                <a>三星</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="show-middle">
+                    <div id="swiper">
+                        <div id="imgContainer">
+                            <!-- <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt=""> -->
+                        </div>
+                        <ul id="redDot">
+                            <!-- <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li> -->
+                        </ul>
+                        <a href="javascript:void(0)" id="clickLeft"><i class="iconfont icon-icon-test4" style="font-size: 15px;color:white"></i></a>
+                        <a href="javascript:void(0)" id="clickRight"><i class="iconfont icon-icon-test3" style="font-size: 15px;color:white"></i></a>
+                    </div>
+                </div>
+                <div class="show-right">
+                    <div class="show-right-top">
+                        <div class="show-right-top-head">
+                            <div>
+                                <!-- <img src="data:image/png;base64,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" alt=""> -->
+                            </div>
+                            <div>
+                                <p>Hi~欢迎逛京东</p>
+                                <p>
+                                    <a>登录</a>|
+                                    <a>注册</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="show-right-top-bottom">
+                            <a href="javascript:void()">新人福利</a>
+                            <a href="javascript:void()">PLUS会员</a>
+                        </div>
+                    </div>
+                    <div class="show-right-middle">
+                        <div class="news-head">
+                            <h5>京东快报</h5>
+                            <a href="javascript:void()">更多></a>
+                        </div>
+                        <ul class="news-list">
+                            <li><a><span>热平</span>爱国者BW01智能手表评测：机械魅力融合科技，优雅随行</a></li>
+                            <li><a><span>热平</span>爱国者BW01智能手表评测：机械魅力融合科技，优雅随行</a></li>
+                            <li><a><span>热平</span>爱国者BW01智能手表评测：机械魅力融合科技，优雅随行</a></li>
+                            <li><a><span>热平</span>爱国者BW01智能手表评测：机械魅力融合科技，优雅随行</a></li>
+                        </ul>
+                    </div>
+                    <div class="show-right-bottom">
+                        <div class="up">
+                            <ul class="up-list">
+                                <li data-act="1"><a><img src="https://m.360buyimg.com/babel/jfs/t1/30057/19/14881/720/5cbf064aE187b8361/eed6f6cbf1de3aaa.png"><span>花费</span></a></li>
+                                <li data-act="2"><a><img src="https://m.360buyimg.com/babel/jfs/t1/36478/38/5384/2901/5cbf065aEb0c60a12/afb4399323fe3b76.png"><span>机票</span></a></li>
+                                <li data-act="3"><a><img src="https://m.360buyimg.com/babel/jfs/t1/31069/34/14642/979/5cbf0665Ec7dc8223/5fee386254dd2ebc.png"><span>酒店</span></a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                                <li><a><img src="https://m.360buyimg.com/babel/jfs/t1/36002/35/9106/3311/5cd4f1bdE06ff07ed/9570fdd46ecd3a76.png">加油卡</a></li>
+                            </ul>
+                        </div>
+                        <div class="down">
+                            <a href="javascript:void(0);" id="downA">×</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="waterfall">
+            <ul class="waterfall-ul"></ul>
+        </div>
+        <div class="footer">
+            <div class = "footer-content">
+                真没有了
+            </div>
+        </div>
+    </div>
+    <script>
+        //搜索弹出选择框
+        let ulList = ['abs','afsd','按时缴费啦','索拉卡附件二','式咖啡机呃呃']
+        let searchImagine = document.querySelector("#search-imagine")
+        let headerBtn = document.querySelector("#header-btn")
+        let searchInput = document.querySelector("#search-input")
+        searchInput.addEventListener('input',searchChange)
+        function searchChange(e){
+            let value = e.target.value
+            searchImagine.children.length > 0 ? searchImagine.innerHTML = "":null
+            !value ? searchImagine.style.display = "none" : searchImagine.style.display="block"
+            let v = document.createDocumentFragment()
+            ulList.forEach(item => {
+                let mli = document.createElement('li')
+                mli.textContent = item
+                v.appendChild(mli)
+            })
+            let mbtn = document.createElement('button')
+            let bli = document.createElement('li')
+            mbtn.id = "search-imagine-btn"
+            mbtn.dataset.show = true
+            mbtn.textContent = "关闭"
+            mbtn.onclick = ()=>{
+                searchImagine.style.display = "none"
+                searchImagine.innerHTML = ""
+            }
+            bli.appendChild(mbtn)
+            bli.style.height = 26 + "px"
+            v.appendChild(bli)
+            searchImagine.appendChild(v)
+        }
+        //鼠标移动更新视图
+        let upList = document.querySelector(".up-list")
+        let down = document.querySelector(".down")
+        
+        let upLi1 = upList.children[0]
+        let upLi2 = upList.children[1]
+        let upLi3 = upList.children[2]
+        for(let i = 0;i<3;i++){
+            upList.children[i].addEventListener('mouseenter',actionBegin)
+            // upList.children[i].addEventListener('mouseleave',actionEnd)
+        }
+        function actionBegin(e){
+            // let after = window.getComputedStyle(e.target,'after')
+            let num = e.target.dataset.act
+            switch (num) {
+                case "1":
+                    upLi2.className = "upDateUp upDateNone upDateZero"
+                    upLi3.className = "upDateUp upDateNone upDateZero"
+                break;
+                case "2":
+                    upLi1.className = "upDateUp upDateNone upDateZero"
+                    upLi3.className = "upDateUp upDateNone upDateZero"
+                break;
+                case "3":
+                    upLi1.className = "upDateUp upDateNone upDateZero"
+                    upLi2.className = "upDateUp upDateNone upDateZero"
+                break;
+            }
+            e.target.className = "upDateUp upDateNone upDate"
+            setTimeout(() => {
+                down.style.top = -195 + "px"
+                down.style.display = "block"
+                let text = e.target.children[0].children[1].textContent
+                down.innerHTML = text + "<a href='javascript:void(0);' id='downA'>×</a>"
+                let downA = document.querySelector("#downA")
+                downA.addEventListener('click',removeList)
+            }, 17);
+            function removeList() {
+                for(let i = 0;i<3;i++){
+                    upList.children[i].className = ""
+                }
+                let timer = setInterval(() => {
+                    if(parseInt(down.style.top) >= 195){
+                        clearInterval(timer)
+                    }
+                    down.style.top = parseInt(down.style.top) + 39 + "px"
+                    down.style.display = "none"
+                },17);
+            }
+        }
+        //轮播图
+        let swiper = document.querySelector('#swiper')
+        let imgContainer = document.querySelector('#imgContainer')
+        let redDot = document.querySelector('#redDot')
+        let clickLeft = document.querySelector('#clickLeft')
+        let clickRight = document.querySelector('#clickRight')
+        let imgUrl = ['./images/1.jpg','./images/2.jpg','./images/3.jpg','./images/4.jpg']
+        let sign = false
+        //获取图片,构建img,构建ul
+        getConstruct(imgUrl,590)
+        //轮播实现
+        
+        swipe(imgContainer)
+        // let imgActive = document.querySelector('#imgActive')
+        // imgActive.addEventListener('mouseenter',handleSwipe)
+        // imgActive.addEventListener('mouseleave',reSwipe)
+
+        clickLeft.addEventListener('click',moveLeft)
+        clickRight.addEventListener('click',moveRight)
+
+        for(let i = 0;i<redDot.children.length;i++){
+            redDot.children[i].addEventListener('mouseenter',()=>{
+                imgContainer.i = i
+                if(imgContainer.i < 0) imgContainer.i = 0
+                for(let j = 0;j<imgContainer.children.length;j++){
+                    imgContainer.children[j].style.opacity = 0
+                    imgContainer.children[j].style.zIndex = -999
+                }
+                imgContainer.style.left = 0 + "px"
+                imgContainer.style.left = - i * 590 + "px"
+                imgContainer.children[i].style.opacity = 1  
+                imgContainer.children[i].style.zIndex = 999
+                swipe(imgContainer)
+            })
+            redDot.children[i].addEventListener('mouseleave',()=>{
+                swipe(imgContainer)
+            })
+        }
+
+        function getConstruct(url,iwidth){
+            imgUrl.push(imgUrl[0])
+            let len = url.length
+            // let fragImg = document.createDocumentFragment()
+            let fragLi = document.createDocumentFragment()
+            for(let i = 0;i<len;i++){
+                // let img = document.createElement('img')
+                if(i === 0){
+                    imgContainer.innerHTML += `<div class='slide' id='imgActive'><img src='${imgUrl[i]}' alt=''></div>`
+                }else{
+                    imgContainer.innerHTML += `<div class='slide'><img src='${imgUrl[i]}' alt=''></div>`
+                }
+                let li = document.createElement('li')
+                // img.src = url[i]
+                // fragImg.appendChild(img)
+                if( i < len - 1){
+                    fragLi.appendChild(li)
+                }
+            }
+            // imgContainer.appendChild(fragImg)
+            redDot.appendChild(fragLi)
+            imgContainer.style.width = len * iwidth + "px"
+        } 
+
+        function swipe(ele){
+            clearInterval(ele.timeId)
+            let len = ele.children.length
+            let interval = 1000
+            if(!ele.i){
+                ele.i = 0
+                imgContainer.children[0].addEventListener('mouseenter',handleSwipe)
+                imgContainer.children[0].addEventListener('mouseleave',reSwipe)
+                for(let k = 1;k < len ; k++ ){
+                    imgContainer.children[k].style.opacity = 0
+                }
+            }
+            liFlow(ele.i)
+            // imgContainer.children[0].style.opacity = 1
+            let iwidth = 590
+            ele.timeId = setInterval(() => {
+                if(ele.i >= len - 1) ele.i = 0
+                ele.i++
+                for(let j = 0;j < len;j++){
+                    imgContainer.children[j].id = ""
+                    imgContainer.children[j].style.opacity = 0
+                    imgContainer.children[j].style.zIndex = -999
+                    imgContainer.children[j].removeEventListener('mouseenter',handleSwipe)
+                    imgContainer.children[j].removeEventListener('mouseleave',reSwipe)
+                }
+                imgContainer.children[ele.i].id = "imgActive"
+                ele.style.left = - ele.i * iwidth + "px"    
+                imgContainer.children.imgActive.style.opacity = 1  
+                imgContainer.children.imgActive.style.zIndex = 999
+                imgContainer.querySelector("#imgActive").addEventListener('mouseenter',handleSwipe)
+                imgContainer.querySelector("#imgActive").addEventListener('mouseleave',reSwipe)
+                liFlow(ele.i)
+            }, interval);
+        }
+
+        function handleSwipe(){
+            clearInterval(imgContainer.timeId)
+            // clickLeft.addEventListener('click',moveLeft)
+            // clickRight.addEventListener('click',moveRight)
+        }
+
+        function reSwipe() {
+            swipe(imgContainer)
+        }
+
+        function moveLeft(e){
+            imgContainer.children[imgContainer.i].style.opacity = 0
+            imgContainer.i--
+            if(imgContainer.i < 0 ) {
+                imgContainer.i = imgContainer.children.length - 2
+                imgContainer.style.left = -imgContainer.i * 590 + "px"
+                imgContainer.children[imgContainer.i].style.opacity = 1 
+            }else{
+                imgContainer.style.left = parseInt(imgContainer.style.left) +  590 + "px"
+                imgContainer.children[imgContainer.i].style.opacity = 1
+            }
+            swipe(imgContainer)
+        }
+        function moveRight(e){
+            imgContainer.children[imgContainer.i].style.opacity = 0
+            imgContainer.i++
+            // if(!imgContainer.i) imgContainer.i = 0
+            
+            if(imgContainer.i >= imgContainer.children.length - 1) imgContainer.i = 0
+            imgContainer.style.left = - imgContainer.i * 590 + "px"
+            imgContainer.children[imgContainer.i].style.opacity = 1 
+            swipe(imgContainer)
+        }
+        function liFlow(index) {
+            let liLen = redDot.children.length
+            for(let i = 0;i<liLen;i++){
+                redDot.children[i].className = ""
+            }
+            if(index >= liLen) index = 0
+            redDot.children[index].className = "liActive"
+        }
+
+        let waterfall = document.querySelector(".waterfall")
+        let waterUl = document.querySelector(".waterfall-ul")
+        //瀑布流
+        for(let i = 0;i<35;i++){
+            waterUl.innerHTML += `<li><img src=''><p>你好，这里是第${i}张图片，看到这儿的都是帅哥美女，就超棒的</p><p class="price">￥${i*100}.00</p></li>`
+        }
+        let sT = ""
+        let k = 0
+        let windowH = window.innerHeight
+        let mbody = document.body
+        mbody.liW = waterUl.children[0]
+            //滚动预加载
+        // let waterTime = setInterval(() => {
+        //     let thisH = mbody.liW.getBoundingClientRect().top
+        //     if((thisH - windowH) > 0 && (thisH - windowH) < 100){
+        //             for(let i = k;i<5 * k + 5;i++){
+        //                 waterUl.children[i].children[0].src = "./images/5.jpg"
+        //             }
+        //             k++
+        //             if(k<7){
+        //                 mbody.liW = waterUl.children[k*5]
+        //             }else{
+        //                 k = 0
+        //                 clearInterval(waterTime)
+        //             }
+        //         }
+        //     }, 0);
+            //图片懒加载
+        lazy()
+        window.lazyTimer = setInterval(() => {
+            lazy()
+            if((windowH + window.pageYOffset) === document.body.scrollHeight){
+                clearInterval(window.lazyTimer)
+            }
+        }, 2000);
+        function lazy(){
+            for(let i = 0;i<waterUl.children.length;i++){
+                let H = waterUl.children[i].getBoundingClientRect().top - windowH
+                if( H < 0){
+                    if(!waterUl.children[i].children[0].dataset.in){
+                        waterUl.children[i].children[0].src = "./images/5.jpg"
+                        waterUl.children[i].children[0].dataset.in = true
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

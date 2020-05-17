@@ -1,0 +1,58 @@
+{
+  "id": "1819978",
+  "name": "ffont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8777510",
+      "name": "arrow_left",
+      "font_class": "icon-test4",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "8777509",
+      "name": "arrow_up",
+      "font_class": "icon-test2",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "8777512",
+      "name": "arrow_right",
+      "font_class": "icon-test3",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "8776822",
+      "name": "cart_empty",
+      "font_class": "icon-test1",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "8776842",
+      "name": "search",
+      "font_class": "icon-test",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "12011691",
+      "name": "arrow-down",
+      "font_class": "arrow-down",
+      "unicode": "e7b2",
+      "unicode_decimal": 59314
+    },
+    {
+      "icon_id": "11372652",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    }
+  ]
+}
