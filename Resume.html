@@ -133,6 +133,17 @@
                 left:-99999px;
             }
         }
+        .littleLi{
+            position: relative;
+        }
+        .littleApp{
+            height: 100px;
+            width:100px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top:-50px;
+        }
     </style>
 </head>
 <body>
@@ -200,7 +211,7 @@
                         <ul><li>
                             <h5>ES基础仿写页面<a href="./Project/ES6/JD.html"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
                             <span>项目介绍：主要运用ES6基础实现首页轮播，图片懒加载</span></br>
-                            <h5><a href="./Project/ES6/canvas.html">canvas画板</a>，<a href="./Project/ES6/3DImg.html">CSS3 3D轮播</a><span class="glyphicon glyphicon-paperclip"></a></h5>
+                            <h5><a href="./Project/ES6/canvas.html">canvas画板</a>，<a href="./Project/ES6/3DImg.html">CSS3 3D轮播</a></h5>
                             <span>项目介绍：用canvas实现简易画板可回退，CSS3动画简单3D轮播</span>
                         </li></ul>                    
                     </div>
@@ -222,13 +233,14 @@
                             <span>项目介绍：简单实现Vue响应式、Vuex状态管理、VueRouter组件的简单源码</span></br>
                         </li></ul>
                     </div>
-                    <div class="showItem">
-                        <h4><span class="glyphicon glyphicon-send"></span>NODE项目</h4>
+                    <div class="showItem littleLi">
+                        <h4><span class="glyphicon glyphicon-send"></span>其它项目</h4>
                         <ul><li>
-                            <h5>Node 登录<a href="./Project/Node/Login SSR/"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
-                            <span>流程：使用KOA、ejs渲染页面到客户端，结合session实现登录验证</span></br>
+                            <h5>微信小程序</h5>
+                            <span>项目介绍：基于node、redux、微信原生组件实现影片订阅功能</span></br>
                             <h5>KOA简单实现<a href="./Project//Node/koa.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
                             <span>项目介绍：基础node实现KOA上下文及中间件</span></br>
+                            <image src="./littleApp.jpg" class="littleApp"></image>
                         </li></ul>
                     </div>
                 </div>
