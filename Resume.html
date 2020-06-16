@@ -35,6 +35,7 @@
             color:rgb(13, 65, 13);
             line-height: 0.1;
             font-weight: bold;
+            width: 200px;
         }
         .rootBox{
             display: flex;
@@ -51,6 +52,7 @@
             border-radius: 7px;
             border-left: 0.5px solid grey;
             box-shadow: 1px 1px 1px 0.1px rgb(83, 83, 83);
+            
         }
         .leftBox{
             padding:0;
@@ -144,6 +146,22 @@
             top: 50%;
             margin-top:-50px;
         }
+        .demo{
+            display:block;
+            /* position: absolute; */
+            right: 0;
+            width:40px;
+            height:20px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-left: 5px;
+            text-align: center;
+            line-height: 20px;
+            float: right;
+            margin-top: -10px;
+        }
     </style>
 </head>
 <body>
@@ -208,18 +226,22 @@
                     <h3><span class="glyphicon glyphicon-apple"></span>项目介绍</h3>
                     <div class="showItem">
                         <h4><span class="glyphicon glyphicon-send"></span>JS项目</h4>
-                        <ul><li>
-                            <h5>ES基础仿写页面<a href="./Project/ES6/JD.html"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
-                            <span>项目介绍：主要运用ES6基础实现首页轮播，图片懒加载</span></br>
-                            <h5><a href="./Project/ES6/canvas.html">canvas画板</a>，<a href="./Project/ES6/3DImg.html">CSS3 3D轮播</a></h5>
-                            <span>项目介绍：用canvas实现简易画板可回退，CSS3动画简单3D轮播</span>
-                        </li></ul>                    
+                        <ul>
+                            <li>
+                                <h5>ES基础仿写页面<a href="./Project/ES6/JD.html"><span class="demo">Demo</span></a></h5>
+                                <span>项目介绍：主要运用ES6基础实现首页轮播，图片懒加载</span></br>
+                            </li>
+                            <li>
+                                <h5><a href="./Project/ES6/canvas.html">canvas画板</a>，<a href="./Project/ES6/3DImg.html">CSS3 3D轮播</a></h5>
+                                <span>项目介绍：用canvas实现简易画板可回退，CSS3动画简单3D轮播</span>
+                            </li>
+                        </ul>                    
                     </div>
                     <div class="showItem">
                         <h4><span class="glyphicon glyphicon-send"></span>React & Node</h4>
                         <ul>
                             <li>
-                                <h5>简单CMS管理系统<a href="https://superz3.github.io/easycms/"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                                <h5>简单CMS管理系统<a href="https://superz3.github.io/easycms/"><span class="demo">Demo</span></a></h5>
                                 <span>项目介绍：注册，验证，登录及数据删除与查询</span></br>
                                 <span>应用技术：自定义React Form表单，Antd Table组件，KOA，Mongoose</span></br>
                             </li>
@@ -228,24 +250,28 @@
                                 <span>项目介绍：基于node、redux、微信原生组件实现影片订阅功能</span></br>
                             </li>
                             <li>
-                                <h5>KOA简单实现<a href="./Project//Node/koa.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                                <h5>KOA简单实现<a href="./Project//Node/koa.js"><span class="demo">Demo</span></a></h5>
                                 <span>项目介绍：基础node实现KOA上下文及中间件</span></br>
                                 <image src="./littleApp.jpg" class="littleApp"></image>
                             </li>
                             <li>
-                                <h5>React简单源码<a href="./Project/React/Source.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
+                                <h5>React简单源码<a href="./Project/React/Source.js"><span class="demo">Demo</span></a></h5>
                                 <span>项目介绍：简单实现React虚拟dom渲染、redux状态管理、react-router的简单源码</span></br>
                             </li>
                         </ul>  
                     </div>
                     <div class="showItem">
                         <h4><span class="glyphicon glyphicon-send"></span>Vue项目</h4>
-                        <ul><li>
-                            <h5>Vue购物<a href="https://superz3.github.io/VueShoppingTest/dist/index.html#/home"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
-                            <span>结合Vant框架，模拟购物App轮播，添加购物车功能</span></br>
-                            <h5>Vue简单源码<a href="./Project/Vue/mvue.js"><span class="glyphicon glyphicon-paperclip"></span></a></h5>
-                            <span>项目介绍：简单实现Vue响应式、Vuex状态管理、VueRouter组件的简单源码</span></br>
-                        </li></ul>
+                        <ul>
+                            <li>
+                                <h5>Vue购物<a href="https://superz3.github.io/VueShoppingTest/dist/index.html#/home"><span class="demo">Demo</span></a></h5>
+                                <span>结合Vant框架，模拟购物App轮播，添加购物车功能</span></br>
+                            </li>
+                            <li>
+                                <h5>Vue简单源码<a href="./Project/Vue/mvue.js"><span class="demo">Demo</span></a></h5>
+                                <span>项目介绍：简单实现Vue响应式、Vuex状态管理、VueRouter组件的简单源码</span></br>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
