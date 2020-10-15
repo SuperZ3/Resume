@@ -1,0 +1,100 @@
+{
+  "id": "2116290",
+  "name": "resume",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11993242",
+      "name": "react",
+      "font_class": "react",
+      "unicode": "e741",
+      "unicode_decimal": 59201
+    },
+    {
+      "icon_id": "11993629",
+      "name": "vuejs",
+      "font_class": "vuejs",
+      "unicode": "e7d1",
+      "unicode_decimal": 59345
+    },
+    {
+      "icon_id": "15821680",
+      "name": "小程序",
+      "font_class": "xiaochengxu",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "12842798",
+      "name": "w_学位-126",
+      "font_class": "w_xuewei-",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "524001",
+      "name": "日期",
+      "font_class": "riqi",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "400019",
+      "name": "邮件",
+      "font_class": "htmal5icon05",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "3483766",
+      "name": "生日",
+      "font_class": "shengri",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "3544181",
+      "name": "评价",
+      "font_class": "ico_home_appraise",
+      "unicode": "e65b",
+      "unicode_decimal": 58971
+    },
+    {
+      "icon_id": "4775573",
+      "name": "职业",
+      "font_class": "zhiye",
+      "unicode": "e75a",
+      "unicode_decimal": 59226
+    },
+    {
+      "icon_id": "7684930",
+      "name": "skill",
+      "font_class": "skill",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "11372759",
+      "name": "电话",
+      "font_class": "dianhua",
+      "unicode": "e8c3",
+      "unicode_decimal": 59587
+    },
+    {
+      "icon_id": "11758449",
+      "name": "工具",
+      "font_class": "gongju",
+      "unicode": "e767",
+      "unicode_decimal": 59239
+    },
+    {
+      "icon_id": "12796373",
+      "name": "项目",
+      "font_class": "xiangmu",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}
